@@ -185,3 +185,42 @@ body {
 .calc {
   border-top: var(--4wpx) solid var(--color-pb);
 }
+
+/* QUERIES */
+@media (max-width: calc(1106em / 16)) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: calc(700em / 16)) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    grid-area: unset !important;
+  }
+}
+
+@media (max-width: calc(375em / 16)) {
+  .container {
+    padding: var(--24wpx);
+  }
+
+  .intro-title {
+    font-size: var(--24tpx);
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    grid-area: unset !important;
+  }
+
+  .card:last-child {
+    margin-bottom: var(--24wpx);
+  }
+}
